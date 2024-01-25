@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www/html":{"guestpath":"/var/www/html","hostpath":"E:/Scuola/M340-Petrini/VagrantfileMultiMacchina/site","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"E:/Scuola/M340-Petrini/VagrantfileMultiMacchina","disabled":false,"__vagrantfile":true}}}

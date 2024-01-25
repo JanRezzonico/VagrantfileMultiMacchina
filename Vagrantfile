@@ -5,6 +5,9 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+if !Vagrant.has_plugin?("vagrant-proxyconf")
+  system "vagrant plugin install vagrant-proxyconf"
+end
 Vagrant.configure("2") do |config|
   BOX_IMAGE = "ubuntu/jammy64"
   PROXY = "http://10.20.5.51:8888"
