@@ -5,9 +5,7 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
-if !Vagrant.has_plugin?("vagrant-proxyconf")
-  system "vagrant plugin install vagrant-proxyconf"
-end
+
 Vagrant.configure("2") do |config|
   BOX_IMAGE = "ubuntu/jammy64"
   PROXY = "http://10.20.5.51:8888"
@@ -17,6 +15,7 @@ Vagrant.configure("2") do |config|
   BASE_HOST_ONLY_NETWORK = "192.168.56"
   WEB_NAME = "web.m340"
   DB_NAME = "db.m340"
+  config.vagrant.plugins = {"vagrant-proxyconf" => {}}
 
   config.vm.define DB_NAME do |subconfig|
     subconfig.vm.box = BOX_IMAGE
